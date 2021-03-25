@@ -1,5 +1,6 @@
 use blockchain::Blockchain;
 
 fn main() {
-    Blockchain::new();
+    let bc = Blockchain::new();
+    println!("{:?}", bc)
 }

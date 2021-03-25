@@ -10,3 +10,6 @@ edition = "2018"
 
 blockchain = { path = "../blockchain" }
 
+[[bin]]
+name = "main"
+path = "src/main.rs"
