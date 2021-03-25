@@ -36,10 +36,6 @@ impl fmt::Debug for Block {
     }
 }
 
-fn pretty(h: &Sha256Hash) -> &str {
-    let s = match std::str::from_utf8(h) {
-        Ok(v) => v,
-        Err(e) => panic!("pretty hash failed: {}", e),
-    };
-    s
+fn pretty(h: &Sha256Hash) -> String {
+    String::from_utf8_lossy(h).to_string()
 }
